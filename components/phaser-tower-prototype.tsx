@@ -90,22 +90,6 @@ export function PhaserTowerPrototype() {
             .rectangle(width / 2, 586, width, 108, 0xfed7aa)
             .setDepth(-8);
 
-          this.add
-            .text(24, 22, "Phaser + Matter.js Prototype", {
-              fontFamily: "Arial",
-              fontSize: "18px",
-              color: "#9a3412"
-            })
-            .setDepth(20);
-
-          this.add
-            .text(24, 48, "画面をタップした位置から荷物を落とす", {
-              fontFamily: "Arial",
-              fontSize: "14px",
-              color: "#7c2d12"
-            })
-            .setDepth(20);
-
           this.matter.add.rectangle(width / 2, 626, width, 36, {
             isStatic: true,
             friction: 0.9
@@ -325,17 +309,22 @@ export function PhaserTowerPrototype() {
       <div className="play-panel card">
         <div
           className="canvas-shell tap-enabled"
-          onClick={(event) => {
-            if (!mountRef.current) {
-              return;
-            }
-
-            const bounds = mountRef.current.getBoundingClientRect();
-            const pointerX = ((event.clientX - bounds.left) / bounds.width) * 420;
-            controllerRef.current?.dropCrateAt(pointerX);
-          }}
         >
           <div ref={mountRef} className="phaser-mount" />
+          <button
+            aria-label="荷物を落とす"
+            className="tap-surface"
+            onPointerDown={(event) => {
+              if (!mountRef.current) {
+                return;
+              }
+
+              event.preventDefault();
+              const bounds = mountRef.current.getBoundingClientRect();
+              const pointerX = ((event.clientX - bounds.left) / bounds.width) * 420;
+              controllerRef.current?.dropCrateAt(pointerX);
+            }}
+          />
           {snapshot.phase === "failed" ? (
             <div className="result-overlay fail">
               <strong>荷崩れ</strong>
