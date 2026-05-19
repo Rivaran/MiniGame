@@ -1,6 +1,5 @@
-薄いピンクと
-濃いピンクと
-紫色と
-白っぽいピンク
+
+
+npm run dev -- --port 3004
 
 http://localhost:3004/

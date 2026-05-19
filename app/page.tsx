@@ -1,11 +1,29 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 const games = [
+  {
+    href: "/food-drop-battle",
+    title: "おかし落とし",
+    tag: "Battle",
+    description: "落ちてくるおかしをかごでキャッチ！1人でCPU対戦、2人で対戦もできる。"
+  },
   {
     href: "/guragura-otsukai-tower",
     title: "グラグラおつかいタワー",
     tag: "Physics",
-    description: "荷物を落として積み上げる、ぐらぐら系のハイスコアゲーム。"
+    description: "丸い荷物も混ざる、慎重さ重視のぐらぐら積みゲーム。"
+  },
+  {
+    href: "/frog-hop",
+    title: "ぴょんぴょんカエル",
+    tag: "Runner",
+    description: "タップでカエルをジャンプさせて、障害物をよける横スクロールゲーム。"
+  },
+  {
+    href: "/shopping-basket",
+    title: "おつかいバスケット",
+    tag: "Collect",
+    description: "かごに必要な食材を集めて、カレーの材料をそろえるゲーム。"
   }
 ];
 
@@ -27,12 +45,6 @@ export default function HomePage() {
             <span className="game-link">あそぶ</span>
           </Link>
         ))}
-
-        <article className="coming-card card">
-          <span className="game-tag muted">Coming Soon</span>
-          <h2>次のゲームを追加予定</h2>
-          <p>短時間で遊べるミニゲームをここから増やしていきます。</p>
-        </article>
       </section>
     </main>
   );

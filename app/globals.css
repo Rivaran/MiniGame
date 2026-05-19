@@ -212,6 +212,82 @@ button {
   font-size: 1.25rem;
 }
 
+.next-cargo-card strong {
+  margin-top: 8px;
+}
+
+.next-cargo-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 68px;
+  margin-top: 8px;
+  border-radius: 14px;
+  background: rgba(249, 115, 22, 0.08);
+}
+
+.canvas-next-cargo {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 104px;
+  height: 76px;
+  border-radius: 18px;
+  background: rgba(255, 247, 237, 0.88);
+  border: 1px solid rgba(249, 115, 22, 0.18);
+  box-shadow: 0 10px 24px rgba(120, 53, 15, 0.12);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.cargo-preview {
+  display: inline-block;
+  background: linear-gradient(180deg, #fb923c, #f97316);
+  box-shadow:
+    inset 0 4px 8px rgba(255, 255, 255, 0.22),
+    0 6px 12px rgba(234, 88, 12, 0.14);
+}
+
+.cargo-crate {
+  width: 46px;
+  height: 24px;
+  border-radius: 10px;
+}
+
+.cargo-wide {
+  width: 58px;
+  height: 18px;
+  border-radius: 10px;
+}
+
+.cargo-tall {
+  width: 24px;
+  height: 42px;
+  border-radius: 10px;
+}
+
+.cargo-square {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+}
+
+.cargo-barrel {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+
+.cargo-heavy-barrel {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
 .play-panel {
   display: grid;
   gap: 12px;
@@ -235,6 +311,14 @@ button {
 .phaser-mount {
   width: 100%;
   min-height: 520px;
+}
+
+.tower-shell .phaser-mount {
+  min-height: 380px;
+}
+
+.runner-shell .phaser-mount {
+  min-height: 330px;
 }
 
 .phaser-mount canvas {
@@ -269,6 +353,44 @@ button {
 
 .score-card strong {
   font-size: 2rem;
+}
+
+.recipe-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.recipe-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(249, 115, 22, 0.16);
+}
+
+.recipe-item span {
+  color: var(--muted);
+}
+
+.basket-capacity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 18px;
+  background: rgba(146, 64, 14, 0.08);
+}
+
+.basket-capacity span {
+  color: var(--muted);
+}
+
+.basket-capacity strong {
+  font-size: 1.1rem;
 }
 
 .phase-chip {
@@ -433,6 +555,14 @@ button {
 
   .phaser-mount {
     min-height: 380px;
+  }
+
+  .tower-shell .phaser-mount {
+    min-height: 300px;
+  }
+
+  .runner-shell .phaser-mount {
+    min-height: 260px;
   }
 
   .score-card strong {
