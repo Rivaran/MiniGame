@@ -321,6 +321,10 @@ button {
   min-height: 330px;
 }
 
+.kage-shell .phaser-mount {
+  min-height: 272px;
+}
+
 .phaser-mount canvas {
   display: block;
   width: 100%;
@@ -563,6 +567,10 @@ button {
 
   .runner-shell .phaser-mount {
     min-height: 260px;
+  }
+
+  .kage-shell .phaser-mount {
+    min-height: 252px;
   }
 
   .score-card strong {

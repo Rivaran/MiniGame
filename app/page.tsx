@@ -24,6 +24,12 @@ const games = [
     title: "おつかいバスケット",
     tag: "Collect",
     description: "かごに必要な食材を集めて、カレーの材料をそろえるゲーム。"
+  },
+  {
+    href: "/kage-fumi",
+    title: "影ふみリズム",
+    tag: "Rhythm",
+    description: "タイミングよくタップして、通り過ぎる人の影を踏もう！コンボで高得点をねらえ。"
   }
 ];
 
