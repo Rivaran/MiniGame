@@ -103,7 +103,7 @@ export function FaucetGame() {
       s.nextSwitch -= dt;
       if (s.nextSwitch <= 0) {
         // 1〜3個をランダムにアクティブ化
-        const count = Math.floor(Math.random() * 3) + 1;
+        const count = Math.floor(Math.random() * 2) + 1;
         const indices = [...Array(FAUCET_COUNT).keys()]
           .sort(() => Math.random() - 0.5)
           .slice(0, count);
