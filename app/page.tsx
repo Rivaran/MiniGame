@@ -51,7 +51,7 @@ export default function HomePage() {
       <section className="game-grid">
         {games.map((game) => (
           <Link className="game-card card" href={game.href} key={game.href}>
-            <span className="game-tag">{game.tag}</span>
+            <span className="game-tag" data-tag={game.tag}>{game.tag}</span>
             <h2>{game.title}</h2>
             <p>{game.description}</p>
             <span className="game-link">あそぶ</span>

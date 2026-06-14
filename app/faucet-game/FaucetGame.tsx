@@ -297,7 +297,7 @@ export function FaucetGame() {
     ctx.fill();
 
     // 水位（スコア量を表示）
-    const maxDrops = 40; // 満水の目安
+    const maxDrops = 80; // 満水の目安
     const fillRatio = Math.min(score / maxDrops, 1);
     if (fillRatio > 0) {
       const waterH = (bh - 16) * fillRatio;
