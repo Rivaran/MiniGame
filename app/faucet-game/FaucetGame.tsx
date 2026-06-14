@@ -351,6 +351,7 @@ export function FaucetGame() {
   // ── ゲーム開始 / リスタート ────────────────────────────────────────────────
   const startGame = useCallback(() => {
     const s = stateRef.current;
+    cancelAnimationFrame(s.rafId);
     s.phase = "playing";
     s.score = 0;
     s.timeLeft = GAME_SECS;
@@ -364,7 +365,8 @@ export function FaucetGame() {
     setPhase("playing");
     setScore(0);
     setTimeLeft(GAME_SECS);
-  }, []);
+    s.rafId = requestAnimationFrame(tick);
+  }, [tick]);
 
   // ── ポインター操作（瓶を動かす）─────────────────────────────────────────────
   const getCanvasX = useCallback((clientX: number): number => {
