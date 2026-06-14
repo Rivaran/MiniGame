@@ -498,6 +498,32 @@ button {
   width: 100%;
 }
 
+/* ── じゃぐちゲーム ──────────────────────────────────────────────────────── */
+.faucet-shell .phaser-mount,
+.faucet-shell {
+  min-height: 520px;
+}
+
+.faucet-canvas-shell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  touch-action: none;
+}
+
+.faucet-canvas-shell canvas {
+  border-radius: 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 640px) {
+  .faucet-shell {
+    min-height: 420px;
+  }
+}
+
 @keyframes overlay-in {
   from {
     opacity: 0;

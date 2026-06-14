@@ -30,6 +30,12 @@ const games = [
     title: "影ふみリズム",
     tag: "Rhythm",
     description: "タイミングよくタップして、通り過ぎる人の影を踏もう！コンボで高得点をねらえ。"
+  },
+  {
+    href: "/faucet-game",
+    title: "じゃぐちゲーム",
+    tag: "Catch",
+    description: "ランダムで変わる蛇口の下に瓶をスライド！20秒で何滴集められるかな？"
   }
 ];
 
