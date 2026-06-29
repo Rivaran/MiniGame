@@ -399,8 +399,12 @@ export function FoodDropBattle() {
     const scaleX = W / bounds.width;
     Array.from(e.touches).forEach((touch) => {
       const x = (touch.clientX - bounds.left) * scaleX;
-      if (x < W / 2) ctrlRef.current?.setT1(x);
-      else ctrlRef.current?.setT2(x);
+      if (snap.mode === "cpu") {
+        ctrlRef.current?.setT1(x);
+      } else {
+        if (x < W / 2) ctrlRef.current?.setT1(x);
+        else ctrlRef.current?.setT2(x);
+      }
     });
   };
 
@@ -408,8 +412,12 @@ export function FoodDropBattle() {
     if (!mountRef.current || snap.phase !== "playing" || e.pointerType === "touch") return;
     const bounds = mountRef.current.getBoundingClientRect();
     const x = ((e.clientX - bounds.left) / bounds.width) * W;
-    if (x < W / 2) ctrlRef.current?.setT1(x);
-    else ctrlRef.current?.setT2(x);
+    if (snap.mode === "cpu") {
+      ctrlRef.current?.setT1(x);
+    } else {
+      if (x < W / 2) ctrlRef.current?.setT1(x);
+      else ctrlRef.current?.setT2(x);
+    }
   };
 
   // ── UI ───────────────────────────────────────────────────────────────────────
