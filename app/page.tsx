@@ -36,6 +36,12 @@ const games = [
     title: "じゃぐちゲーム",
     tag: "Catch",
     description: "ランダムで変わる蛇口の下に瓶をスライド！20秒で何滴集められるかな？"
+  },
+  {
+    href: "/egg-merge",
+    title: "たまごマージ",
+    tag: "Puzzle",
+    description: "スワイプで同じたまご・生きものを合体！🥚から育ててドラゴン🐉を目指すパズル。"
   }
 ];
 
